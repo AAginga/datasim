@@ -1,0 +1,42 @@
+<div class="row">
+  <!-- column -->
+    <div class="col-lg-12">
+     <div class="text-right">
+        <button class="btn btn-primary" routerLink="/tickets/create">Create New Ticket</button>
+     </div>
+      <br>    
+        <div class="card">
+          <div class="card-body">
+              <div class="table-responsive">
+                  <table class="table">
+                      <thead>
+                          <tr>
+                              <th>Date</th>
+                              <th>Subject</th>
+                              <th>Type</th>
+                              <th>Message</th>
+                              <th>Status</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor="let tick of ticket">
+                              <td>{{tick.datecreated}}</td> 
+                              <td>{{tick.subject}}</td>
+                              <td>{{tick.type}}</td>
+                              <td>{{tick.message}}</td>
+                              <td>{{tick.status}}</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+              <ngb-pagination [collectionSize]="100" [(page)]="page" aria-label="Default pagination"></ngb-pagination> 
+            </div>         
+        </div>        
+    </div>
+</div>
+
+  
+  
+  
+  
+  

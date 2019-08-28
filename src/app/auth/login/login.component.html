@@ -1,0 +1,76 @@
+<div class="login-register" style="background-image:url(assets/images/background/login-register.png);">
+  <div class="login-box card">
+    <div class="card-body">
+      <form class="form-horizontal form-material" (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+        <h3 class="box-title m-b-20"><!-- LTE - login --><img src="/assets/images/logo-text.png"></h3>
+      <!--  <div class="form-group "  [ngClass]="{ 'has-error': !email.valid && (email.dirty || email.touched) }">
+            <div class="col-xs-12">
+                <input type="email" [(ngModel)]="user.email"  name="email" #email="ngModel" required class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                <div *ngIf="email.invalid && (email.dirty || email.touched)" class="form-feedback">
+                  <div *ngIf="email?.errors.required">Email is required</div>
+                  <div *ngIf="email?.errors.email">Email must be a valid email address</div>
+                </div>
+            </div>
+        </div> -->
+        <div class="form-group "  [ngClass]="{ 'has-error': !phone.valid && (phone.dirty || phone.touched) }">
+          <div class="col-xs-12">
+              <input type="phone" [(ngModel)]="user.phone"  name="phone" #phone="ngModel" required class="form-control" id="phone" placeholder="Enter phone">
+              <div *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="form-feedback">
+                <div *ngIf="phone?.errors.required">Phone is required</div>
+                <div *ngIf="phone?.errors.phone">Phone must be a valid phone number</div>
+              </div>
+          </div>
+      </div>
+        <div class="form-group" [ngClass]="{ 'has-error': !password.valid && (password.dirty || password.touched) }">  
+            <div class="col-xs-12">
+                <input type="password" [(ngModel)]="user.password" name="password" #password="ngModel" required minlength="6" class="form-control" id="password" placeholder="Password">
+                <div *ngIf="password.invalid && (password.dirty || password.touched)" class="form-feedback">
+                  <div *ngIf="password?.errors.required">Password is required</div>
+                  <div *ngIf="password?.errors.minlength">Password must be at least 6 characters</div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-12 font-14">
+            <div class="checkbox checkbox-primary pull-left p-t-0">
+              <input id="checkbox-signup" type="checkbox">
+              <label for="checkbox-signup"> Remember me </label>
+            </div> <a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><!-- <i class="fa fa-lock m-r-5"></i> --> Forgot pwd?</a> </div>
+        </div>
+        <div class="form-group text-center m-t-20">
+          <div class="col-xs-12">
+              <div  *ngIf="error" class="alert alert-danger" role="alert">
+                  Ops: {{ error.error }}
+              </div>
+              <button [disabled]="!loginForm.valid" class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit">Login</button>
+          </div>
+        </div>
+        <div class="form-group m-b-0">
+          <div class="col-sm-12 text-center">
+            <div>Don't have an account? <a class="text-info m-l-5" [routerLink]="['/auth/register']"><b>Sign Up</b></a></div>
+          </div>
+        </div>
+      </form>
+      <form class="form-horizontal" id="recoverform" action="index.html">
+        <div class="form-group ">
+          <div class="col-xs-12">
+            <h3>Recover Password</h3>
+            <p class="text-muted">Enter your Email and instructions will be sent to you! </p>
+          </div>
+        </div>
+        <div class="form-group ">
+          <div class="col-xs-12">
+            <input class="form-control" type="text" required="" placeholder="Email"> </div>
+        </div>
+        <div class="form-group text-center m-t-20">
+          <div class="col-xs-12">
+            <a class="btn btn-primary btn-lg btn-block text-uppercase waves-effect waves-light" [routerLink]="['/login']">Reset</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+  

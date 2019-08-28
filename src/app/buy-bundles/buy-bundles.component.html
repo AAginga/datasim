@@ -1,0 +1,70 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card card-body">
+		<!--	<h4 class="card-title">Buy Data Bundles</h4>
+			<p class="card-title">Data Bundle Balance: <span class="label label-success">KES 0</span></p> -->
+            <ngb-tabset type="pills">
+                <ngb-tab id="safaricomTab" title="">
+                    <ng-template ngbTabContent>
+                      <!--content here-->
+                      <div class="col-sm-4">
+                        <form class="form-horizontal m-t-30" method="post"  (ngSubmit)="onSubmit(bundleForm)" #bundleForm="ngForm">
+                                <div class="form-group" [ngClass]="{ 'has-error': !phone.valid && (phone.dirty || phone.touched) }">
+                                    <label>Enter Number:</label>
+                                    <input type="text" [(ngModel)]="order.phone"  class="form-control" name="phone" #phone="ngModel" required >
+                                    <div *ngIf="phone.invalid && (phone.dirty || phone.touched)" class="form-feedback">
+                                            <div *ngIf="phone?.errors.required">Phone is required</div>
+                                            <div *ngIf="phone?.errors.phone">Phone must be a valid phone number</div>
+                                          </div>
+                                </div>
+                                                                
+                                <h5>Choose Data Bundle to Purchase:</h5> 
+                                    <div class="form-group">
+                                        <div *ngFor="let bundle of bundles" class="custom-control custom-radio">
+                                            <h4><b>{{ bundle.duration }} Bundles</b></h4>
+                                            <div *ngFor="let product of bundle.products">
+                                                <input type="radio" [(ngModel)]="order.id"  id="flat-radio-{{ product.id}}" name="id" #id="ngModel" required value="{{ product.id}}" class="custom-control-input">
+                                                <label for="flat-radio-{{ product.id }}" class="custom-control-label" >{{product.size}} @ KES {{ product.amount}}</label>
+                                            </div>
+                                        </div>	                 			
+                                    </div>					
+                                <button type="submit" [disabled]="!bundleForm.valid" class="btn btn-success">Buy Bundle</button>
+                            </form>
+                        </div>
+                    </ng-template>
+                </ngb-tab>
+            <!--    <ngb-tab id="creditTab">
+                    <ng-template ngbTabContent>
+						<!--content here-->
+					<!--	<form method="post" #bundleCredit="ngForm">
+							<br><span class="help-block"></span>
+								<div class="form-group">
+									<h5>Choose Data Bundle to Purchase below:</h5>
+									<div class="controls">
+										<select name="amount" class="form-control custom-select">
+											<option value="500">KES 500.00</option>
+											<option value="1000">KES 1000.00</option>
+											<option value="2500">KES 2500.00</option>
+											<option value="5000">KES 5000.00</option>
+											<option value="10000">KES 10000.00</option>
+											<option value="25000">KES 25000.00</option>
+											<option value="50000">KES 50000.00</option>
+											<option value="100000">KES 100000.00</option>
+										</select>
+									</div>
+								</div>
+							<button type="submit" class="btn btn-ar btn-success">Add Credit</button>
+						</form>
+                    </ng-template>
+                  </ngb-tab>  -->
+			</ngb-tabset>
+			
+
+        </div>
+    </div>
+</div>
+
+
+
+	
+		  

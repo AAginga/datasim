@@ -1,0 +1,11 @@
+.nav-pills .nav-link {
+
+    background-color: #18BC9C;  
+}
+#staffTab,
+#taskHoursTab {
+  margin-right: 0.25em;
+  color: #fff;
+  background-color: #18BC9C;
+  border-color: #18BC9C;
+}

@@ -1,0 +1,57 @@
+[{
+  "duration": "30 Days",
+  "products": [{
+    "amount": "293",
+    "size": "1 GB",
+    "name": "GEDA 1gb 30 Days",
+    "id": "5052130"
+  }, {
+    "amount": "523",
+    "size": "2 GB",
+    "name": "GEDA 2gb 30 Days",
+    "id": "5052131"
+  }, {
+    "amount": "1147",
+    "size": "5 GB",
+    "name": "GEDA 5gb 30 Days",
+    "id": "5052132"
+  }, {
+    "amount": "1895",
+    "size": "10 GB",
+    "name": "GEDA 10gb 30 Days",
+    "id": "5052133"
+  }, {
+    "amount": "2642",
+    "size": "15 GB",
+    "name": "GEDA 15gb 30 Days",
+    "id": "5052134"
+  }]
+}, {
+  "duration": "90 Days",
+  "products": [{
+    "amount": "1587",
+    "size": "5 GB",
+    "name": "GEDA 5gb 90 Days",
+    "id": "5052135"
+  }, {
+    "amount": "2420",
+    "size": "8 GB",
+    "name": "GEDA 8gb 90 Days",
+    "id": "5052136"
+  }, {
+    "amount": "2785",
+    "size": "10 GB",
+    "name": "GEDA 10gb 90 Days",
+    "id": "5052137"
+  }, {
+    "amount": "3857",
+    "size": "15 GB",
+    "name": "GEDA 15gb 90 Days",
+    "id": "5052138"
+  }, {
+    "amount": "4743",
+    "size": "20 GB",
+    "name": "GEDA 20gb 90 Days",
+    "id": "5052139"
+  }]
+}]

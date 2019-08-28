@@ -1,0 +1,29 @@
+<form novalidate method="post"  (ngSubmit)="onSubmit(ticketForm)" #ticketForm="ngForm">
+  <div class="form-group">
+      <label>Type</label>
+      <select class="form-control" [(ngModel)]="tick.type" name="type">
+        <option *ngFor="let ticket of ticketype" [value]="ticket.id">{{ticket.name}}</option> 
+      </select>
+  </div>
+  <div class="form-group">
+      <label>Subject</label>
+      <input class="form-control" [(ngModel)]="tick.subject" name="subject"  />
+  </div>
+  <div class="form-group">
+      <label>Message</label>
+      <textarea class="form-control" cols="2" rows="5"[(ngModel)]="tick.message"  name="message" id="message"></textarea>
+  </div>
+  <div class="button-group">
+    <button type="submit" [disabled]="!ticketForm.valid" class="btn btn-primary" [class.btn-warning]="editing">
+        {{editing ? "Save" : "Create"}}
+    </button>
+    <button type="reset" class="btn btn-secondary" routerLink="/tickets">
+        Cancel
+    </button>
+  </div>
+</form>
+
+
+
+
+
